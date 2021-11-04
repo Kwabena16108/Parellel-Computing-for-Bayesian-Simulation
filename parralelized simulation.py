@@ -25,7 +25,6 @@ import pandas as pd
 import math
 import random
 import time
-from scipy.stats import weibull_min
 import multiprocessing
 import time as time
 
