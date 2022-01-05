@@ -75,7 +75,7 @@ def sim(t,T, D, lam, kappa, theta):
             # draw random number from poisson distribution
             nft = np.random.poisson(lam[j,i] * (T-t)) 
             # draw nft random numbers from a gamma distribution
-            sft[i,j] = np.random.gamma(shape = (kappa[j] * nft), scale = (1 / theta[j]), size=1)
+            sft[i,j] = 1 / np.random.gamma(shape = (kappa[j] * nft), scale = (1 / theta[j]), size=1)
     #print(sft)
     p = prob(sft, D)
                   
